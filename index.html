@@ -1,3 +1,9 @@
+<!-- 
+    Start Date: 10-nov-2024
+    credit to "https://github.com/Yushi5058/survey-form/blob/main/index.html#L25"
+    project name "survey form"
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,17 +50,67 @@
         <!-- form section -->
         <form
             id="form"
-            class="form" 
-            action="#"
-            method="post"
+            class="form"
+            method="get"
         >
+            <!-- first name input -->
             <label for="first-name">First name</label>
             <input 
                 type="text"
                 id="first-name"
-                pattern="pattern="^[A-Za-z ]{1,15}$""    
+                pattern="^[A-Za-z ]{1,15}$"
+                placeholder="Jhon"
+                title="Enter first name"    
                 required
             >
+            <!-- last name input -->
+            <label for="last-name">Last name</label>
+            <input 
+                type="text"
+                id="last-name"
+                pattern="^[A-Za-z ]{1,15}$"
+                title="Enter last name"
+                placeholder="Doe"
+                required    
+            >
+            <!-- email input -->
+            <label for="email">Email</label>
+            <input 
+                type="text"
+                id="email"
+                title="Fill the email"
+                placeholder="johndoe@gmail.com"
+                required
+            >
+            <!-- phone number input -->
+            <label for="phone">Phone number</label>
+            <input 
+                type="tel"
+                id="phone"
+                
+                title="Please Myanmar Phone number."
+                placeholder="+9591234567"
+                required
+            >
+            <!-- pattern="^\+959\d{7,9}$" -->
+            <!-- password -->
+            <label for="password">Password</label>
+            <input 
+                type="password"
+                id="password"
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                title="password"
+                oninput="checkPassword()"
+                required
+            >
+
+            <!-- submit button -->
+            <button 
+                type="submit"
+                class="btn"    
+            >
+                submit
+            </button>
         </form>
         
     </section>

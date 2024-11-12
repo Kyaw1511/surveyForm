@@ -19,102 +19,147 @@
     <link 
         rel="icon"
         type="image/x-icon" 
-        href="assets/pic/ubuntu.png">
+        href="assets/pic/ubuntu.png"
+    >
+    <!-- link fontawesome cdn -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" /
+    >
 </head>
 <body>
     <!-- navbar section -->
     <nav>
-        <img src="assets/pic/ubuntu.png" 
-        alt="ubuntu"
-    >
-        <h1>
-            K.Theo
-        </h1>
+        <div>
+            <img 
+                src="assets/pic/ubuntu.png" 
+                alt="ubuntu"
+            >
+            <h1>
+                K.Theo
+            </h1>
+        </div>
     </nav>
     <!-- body section -->
     <section>
-        <div>
-            <!-- first paragraph -->
+        <div class="text-selection">
+            <div>
+                <!-- first paragraph -->
+                <p>
+                    This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.
+                </p>
+                <!-- second paragraph -->
+                <p>
+                    You know you want to.
+                </p>
+                <!-- third paragraph -->
+                <p>
+                    Let's do this!
+                </p>
+            </div>
+            <!-- form section -->
+            <form
+                id="form"
+                class="form"
+                method="get"
+            >
+                <!-- first name input -->
+                <label for="first-name">First name</label>
+                <input 
+                    type="text"
+                    id="first-name"
+                    pattern="^[A-Za-z ]{1,15}$"
+                    placeholder="Jhon"
+                    title="Enter first name"    
+                    required
+                >
+                <!-- last name input -->
+                <label for="last-name">Last name</label>
+                <input 
+                    type="text"
+                    id="last-name"
+                    pattern="^[A-Za-z ]{1,15}$"
+                    title="Enter last name"
+                    placeholder="Doe"
+                    required    
+                >
+                <!-- email input -->
+                <label for="email">Email</label>
+                <input 
+                    type="text"
+                    id="email"
+                    title="Fill the email"
+                    placeholder="johndoe@gmail.com"
+                    required
+                >
+                <!-- phone number input -->
+                <label for="phone">Phone number</label>
+                <input 
+                    type="tel"
+                    id="phone"
+                    title="Please Myanmar Phone number."
+                    placeholder="+9591234567"
+                    required
+                >
+                <!-- pattern="^\+959\d{7,9}$" -->
+                <!-- password -->
+                <label for="password">Password</label>
+                <input 
+                    type="password"
+                    id="password"
+                    title="password"
+                    oninput="checkPassword()"
+                    required
+                >
+                <!-- pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" -->
+                
+                <!-- confirm password -->
+                <label for="password-confirm">Confirm Password</label>
+                <input 
+                    type="password"
+                    id="password-confirm"
+                    title="Confirm Password"
+                    oninput="checkPassword()"
+                    required
+                >
+                <!-- submit button -->
+                <div class="submit-btn">
+                    <button 
+                        type="submit"
+                        class="btn"    
+                    >
+                        submit
+                    </button>
+                </div>
+            </form>
+    
+            <!-- logIn section -->
             <p>
-                This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.
-            </p>
-            <!-- second paragraph -->
-            <p>
-                You know you want to.
-            </p>
-            <!-- third paragraph -->
-            <p>
-                Let's do this!
+                Already have an account?
+                <a 
+                    href="#"
+                    target="_blank"
+                >
+                    logIn
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </a>
             </p>
         </div>
-        <!-- form section -->
-        <form
-            id="form"
-            class="form"
-            method="get"
-        >
-            <!-- first name input -->
-            <label for="first-name">First name</label>
-            <input 
-                type="text"
-                id="first-name"
-                pattern="^[A-Za-z ]{1,15}$"
-                placeholder="Jhon"
-                title="Enter first name"    
-                required
-            >
-            <!-- last name input -->
-            <label for="last-name">Last name</label>
-            <input 
-                type="text"
-                id="last-name"
-                pattern="^[A-Za-z ]{1,15}$"
-                title="Enter last name"
-                placeholder="Doe"
-                required    
-            >
-            <!-- email input -->
-            <label for="email">Email</label>
-            <input 
-                type="text"
-                id="email"
-                title="Fill the email"
-                placeholder="johndoe@gmail.com"
-                required
-            >
-            <!-- phone number input -->
-            <label for="phone">Phone number</label>
-            <input 
-                type="tel"
-                id="phone"
-                
-                title="Please Myanmar Phone number."
-                placeholder="+9591234567"
-                required
-            >
-            <!-- pattern="^\+959\d{7,9}$" -->
-            <!-- password -->
-            <label for="password">Password</label>
-            <input 
-                type="password"
-                id="password"
-                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                title="password"
-                oninput="checkPassword()"
-                required
-            >
-
-            <!-- submit button -->
-            <button 
-                type="submit"
-                class="btn"    
-            >
-                submit
-            </button>
-        </form>
         
     </section>
 
+    <!-- link to script.js -->
     <script src="script.js"></script>
+    <!-- link to fontawesome cdn js -->
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" 
+        integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"
+    >
+    </script>
 </body>
 </html>

@@ -29,8 +29,26 @@ nav div h1 {
     padding: 10px;
     text-align: center;
 }
+.text-selection div p:first-child {
+    /* border: 2px solid salmon; */
+    font-size: 20px;
+    color: #3D5300;
+    margin: 10px auto;
+    width: 80%;
+    text-indent: 30px;
+}
+.text-selection div p:nth-child(2) {
+    font-size: 19px;
+    color: #FA4032;
+    margin: 8px;
+}
+.text-selection div p:last-child {
+    color: #125B9A;
+    font-size: 19px;
+}
 form {
     border: 2px solid gray;
+    border-radius: 8px;
     max-width: 60%;
     display: grid;
     grid-template-columns: 140px 220px;
@@ -65,11 +83,13 @@ button {
     text-transform: capitalize;
     font-size: 16px;
     text-align: center;
-    touch-action: manipulation;
-    
+    touch-action: manipulation; 
 }
 .submit-btn {
+    /* border: 2px solid green; */
+    grid-column: 2;
     display: flex;
+    align-items: end;
     justify-content: end;
 }
 
@@ -82,4 +102,51 @@ input[type="number"]::-webkit-inner-spin-button {
 /* for Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+/* mobile dimension for iphone se 375 x 667 */
+@media (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: #8B5DFF;
+        border: 2px solid green;
+        width: 80%;
+        height: 800px;
+        margin: 10px auto;
+    }
+    nav div img {
+        /* border: 2px solid peru; */
+        width: 56px;
+    }
+    nav div h1 {
+        font-size: 20px;
+    }
+    .text-selection {
+        border: 2px solid red;
+        max-width: 90%;
+        border-radius: 10px;
+        margin: 10px auto;
+    }
+    .text-selection div {
+        /* border: 4px solid seagreen; */
+        max-width: 95%;
+        margin: 10px auto;
+    }
+    .text-selection div p:first-child {
+        /* border: 2px solid blueviolet; */
+        font-size: 14px;
+        text-align: justify;
+        text-indent: 10px;
+        margin: 10px auto 5px;
+        padding: 0px;
+    }
+    .text-selection div p:nth-child(2),
+    .text-selection div p:last-child {
+        font-size: 14px;
+        margin: 5px;
+    }
+
 }

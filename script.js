@@ -1,6 +1,7 @@
 // survey form of javascript
 
 const password = document.getElementById("password");
+
 const lengthCriteria = /.{8,}/;
 const uppercaseCriteria = /[A-Z]/;
 const lowercaseCriteria = /[a-z]/;
@@ -16,5 +17,6 @@ function checkPassword() {
     } else {
         alert("hi");
     }
+    console.log(password.value);
 
 }

@@ -67,6 +67,25 @@ form label {
 form input {
     height: 30px;
 }
+.password-input {
+    /* border: 2px solid green; */
+    position: relative;
+}
+.password-input input {
+    position: relative;
+    width: 170px;
+    left: -10px;
+}
+.password-input i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+
+}
+/* .password-input i {
+    position: absolute
+} */
 button {
     background-color: #4A628A;
     border-radius: 10px;

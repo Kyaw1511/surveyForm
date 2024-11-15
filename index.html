@@ -109,13 +109,16 @@
                 <!-- pattern="^\+959\d{7,9}$" -->
                 <!-- password -->
                 <label for="password">Password</label>
-                <input 
-                    type="password"
-                    id="password"
-                    title="password"
-                    oninput="checkPassword()"
-                    required
-                >
+                    <div class="password-input">
+                        <input 
+                            type="password"
+                            id="password"
+                            title="password"
+                            oninput="checkPassword()"
+                            required
+                        >
+                        <i class="fa-regular fa-eye-slash"></i>
+                    </div>
                 <!-- pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" -->
                 
                 <!-- confirm password -->

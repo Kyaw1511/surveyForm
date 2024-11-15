@@ -1,8 +1,11 @@
 Date: 13-Nov-2024
 mobile site version (iphoneSE) => finish
+
 Date: 14-Nov-2024
 mobile site version (iphoneSE) design for form tag => finish
+
 Date: 15-Nov-2024
-Tablet site version + show&hide password icon (design and Js)
+Tablet site version + show&hide password icon (design and Js) => not finished
+
 Date: 16-Nov-2024
 More Commit JavaScript function 
